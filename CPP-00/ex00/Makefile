@@ -1,18 +1,17 @@
-NAME	= megaphone
-	
-CC		= c++
-FLAGS	= -Wall -Wextra -Werror -std=c++98
-RM		= rm -rf
+NAME = phonebook
+
+CC = g++
+FLAGS = -Wall -Werror -Wextra -std=c++98
+RM = rm -rf
+
+SRCS = $(wildcard *.cpp)
 
 all: $(NAME)
 
-$(NAME): 
-	$(CC) $(FLAGS) megaphone.cpp -o $(NAME)
+$(NAME):
+	$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 clean:
-	$(RM) $(NAME)
-
-fclean:
 	$(RM) $(NAME)
 
 re: clean all
